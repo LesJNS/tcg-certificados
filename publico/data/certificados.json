@@ -21,7 +21,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-001.png",
     "vista": "certs/TCG-CI-2026-001.jpg",
-    "pdf": "certs/TCG-CI-2026-001.pdf"
+    "pdf": "certs/TCG-CI-2026-001.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-002",
@@ -45,7 +46,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-002.png",
     "vista": "certs/TCG-CI-2026-002.jpg",
-    "pdf": "certs/TCG-CI-2026-002.pdf"
+    "pdf": "certs/TCG-CI-2026-002.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-003",
@@ -69,7 +71,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-003.png",
     "vista": "certs/TCG-CI-2026-003.jpg",
-    "pdf": "certs/TCG-CI-2026-003.pdf"
+    "pdf": "certs/TCG-CI-2026-003.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-004",
@@ -93,7 +96,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-004.png",
     "vista": "certs/TCG-CI-2026-004.jpg",
-    "pdf": "certs/TCG-CI-2026-004.pdf"
+    "pdf": "certs/TCG-CI-2026-004.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-005",
@@ -117,7 +121,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-005.png",
     "vista": "certs/TCG-CI-2026-005.jpg",
-    "pdf": "certs/TCG-CI-2026-005.pdf"
+    "pdf": "certs/TCG-CI-2026-005.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-006",
@@ -141,7 +146,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-006.png",
     "vista": "certs/TCG-CI-2026-006.jpg",
-    "pdf": "certs/TCG-CI-2026-006.pdf"
+    "pdf": "certs/TCG-CI-2026-006.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-007",
@@ -165,7 +171,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-007.png",
     "vista": "certs/TCG-CI-2026-007.jpg",
-    "pdf": "certs/TCG-CI-2026-007.pdf"
+    "pdf": "certs/TCG-CI-2026-007.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-008",
@@ -189,7 +196,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-008.png",
     "vista": "certs/TCG-CI-2026-008.jpg",
-    "pdf": "certs/TCG-CI-2026-008.pdf"
+    "pdf": "certs/TCG-CI-2026-008.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-009",
@@ -213,7 +221,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-009.png",
     "vista": "certs/TCG-CI-2026-009.jpg",
-    "pdf": "certs/TCG-CI-2026-009.pdf"
+    "pdf": "certs/TCG-CI-2026-009.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-010",
@@ -237,7 +246,8 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-010.png",
     "vista": "certs/TCG-CI-2026-010.jpg",
-    "pdf": "certs/TCG-CI-2026-010.pdf"
+    "pdf": "certs/TCG-CI-2026-010.pdf",
+    "empresa": "Caja Maynas"
   },
   {
     "codigo": "TCG-CI-2026-011",
@@ -261,6 +271,7 @@
     "fecha_emision": "2026-10-22",
     "imagen": "certs/TCG-CI-2026-011.png",
     "vista": "certs/TCG-CI-2026-011.jpg",
-    "pdf": "certs/TCG-CI-2026-011.pdf"
+    "pdf": "certs/TCG-CI-2026-011.pdf",
+    "empresa": "Caja Maynas"
   }
 ]
