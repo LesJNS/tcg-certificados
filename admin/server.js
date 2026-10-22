@@ -264,8 +264,18 @@ const servidor = http.createServer(async (req, res) => {
   }
 });
 
+/** Reescribe publico/c/*.html con la plantilla actual: evita páginas desactualizadas si cambia credencial.html. */
+async function regenerarPaginas(cfg) {
+  const lista = await leerJson(DATA, []);
+  for (const reg of lista) {
+    await escribirAtomico(path.join(PAGINAS, `${reg.codigo}.html`), await paginaCredencial(reg, cfg.baseUrl));
+  }
+  return lista.length;
+}
+
 (async () => {
   const cfg = await leerJson(CONFIG, {});
+  console.log(`Páginas de credencial actualizadas: ${await regenerarPaginas(cfg)}`);
   const host = "127.0.0.1"; // solo localhost, a propósito
   const puerto = Number(process.env.PORT) || (cfg.servidor && cfg.servidor.puerto) || 3000;
   servidor.listen(puerto, host, () => {

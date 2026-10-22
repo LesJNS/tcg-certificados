@@ -121,12 +121,17 @@
       return r.json();
     })
     .then(function (lista) {
-      var c = (lista || []).filter(function (x) {
-        return String(x.codigo).toUpperCase() === codigo;
-      })[0];
-      if (c) mostrar(c); else noEncontrado(codigo);
-    })
-    .catch(function () {
+      try {
+        var c = (lista || []).filter(function (x) {
+          return String(x.codigo).toUpperCase() === codigo;
+        })[0];
+        if (c) mostrar(c); else noEncontrado(codigo);
+      } catch (e) {
+        if (window.console) console.error(e);
+        estado("missing", "!", "No se pudo mostrar el certificado",
+          "Ocurrió un error al mostrar los datos. Intenta recargar la página.");
+      }
+    }, function () {
       estado("missing", "!", "No se pudo verificar",
         "Hubo un problema de conexión. Intenta de nuevo en unos minutos.");
     });
