@@ -5,3 +5,6 @@ __pycache__/
 *.tmp
 node_modules/
 .vercel/
+
+# repo independiente del panel online
+TCG-generador/

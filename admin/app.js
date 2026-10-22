@@ -194,6 +194,7 @@
 
   // ---------- importación masiva ----------
   let filasCsv = [];
+  let loteBloqueado = false; // tras publicar (o fallar) hay que cargar un CSV nuevo para no repetir el lote
 
   function parseCsv(texto) {
     texto = texto.replace(/^﻿/, "");
@@ -226,19 +227,25 @@
     const idx = (n) => cab.indexOf(n);
     const col = { nombre: idx("nombre"), capacitacion: idx("capacitacion"), fechas: idx("fechas"), area: idx("area") };
     if (col.nombre < 0 || col.capacitacion < 0 || col.fechas < 0) throw new Error("Faltan columnas: se requieren nombre, capacitacion y fechas (area es opcional)");
-    const m = S.siguiente.match(/^(.*-)(\d+)$/);
-    if (!m) throw new Error("No se pudo calcular el siguiente código");
-    const pref = m[1];
-    let n = parseInt(m[2], 10);
     filasCsv = filas.slice(1).map((r) => ({
-      codigo: pref + String(n++).padStart(3, "0"),
-      nombre: (r[col.nombre] || "").trim(),
-      capacitacion: (r[col.capacitacion] || "").trim(),
-      fechas: (r[col.fechas] || "").trim(),
-      area: col.area >= 0 ? (r[col.area] || "").trim() : "",
+      codigo: "",
+      nombre: (r[col.nombre] || "").trim(), capacitacion: (r[col.capacitacion] || "").trim(),
+      fechas: (r[col.fechas] || "").trim(), area: col.area >= 0 ? (r[col.area] || "").trim() : "",
       resultado: "",
     }));
+    loteBloqueado = false;
+    asignarCodigos();
     renderMasivo();
+  }
+
+  /** Solo las filas completas reciben código: las omitidas no dejan huecos en la numeración. */
+  const completa = (f) => f.nombre && f.capacitacion && f.fechas;
+
+  function asignarCodigos() {
+    const m = S.siguiente.match(/^(.*-)(\d+)$/);
+    if (!m) throw new Error("No se pudo calcular el siguiente código");
+    let n = parseInt(m[2], 10);
+    filasCsv.forEach((f) => { f.codigo = completa(f) ? m[1] + String(n++).padStart(3, "0") : ""; });
   }
 
   function renderMasivo() {
@@ -254,10 +261,11 @@
     $("m-info").textContent = filasCsv.length
       ? `${filasCsv.length} filas${invalidas ? ` · ${invalidas} con datos incompletos (se omitirán)` : ""}`
       : "";
-    $("b-masivo").disabled = !filasCsv.length || invalidas === filasCsv.length;
+    $("b-masivo").disabled = loteBloqueado || !filasCsv.length || invalidas === filasCsv.length;
   }
 
   async function generarMasivo() {
+    loteBloqueado = true;
     const b = $("b-masivo"); b.disabled = true;
     let ok = 0;
     for (const f of filasCsv) {
@@ -269,6 +277,7 @@
       renderMasivo();
     }
     await recargar();
+    $("f-codigo").value = S.siguiente; actualizarPreview(); // el formulario sigue con el código ya usado por el lote
     toast(`${ok} de ${filasCsv.length} certificados generados`, ok < filasCsv.length);
   }
 
