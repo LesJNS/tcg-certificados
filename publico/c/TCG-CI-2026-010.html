@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Certificado TCG-CI-2026-010 · Towers Consulting Group (TCG)</title>
+<meta name="description" content="Verificación de certificados emitidos por Towers Consulting Group (TCG).">
+<meta name="theme-color" content="#0070c0">
+<link rel="icon" href="/assets/logo.png">
+<!--OG-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Towers Consulting Group (TCG)">
+<meta property="og:title" content="Certificado TCG-CI-2026-010 · Towers Consulting Group (TCG)">
+<meta property="og:description" content="Certificado verificable emitido por Towers Consulting Group (TCG): DESARROLLO E IMPLEMENTACIÓN DEL MODELO DE CALIFICACIÓN INTERNA.">
+<meta property="og:url" content="https://tcg-certificados.vercel.app/c/TCG-CI-2026-010">
+<meta property="og:image" content="https://tcg-certificados.vercel.app/certs/TCG-CI-2026-010.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tcg-certificados.vercel.app/certs/TCG-CI-2026-010.jpg">
+<!--/OG-->
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/" aria-label="Towers Consulting Group, inicio"><img src="/assets/logo.png" alt="Towers Consulting Group"></a>
+    <span class="tag">Verificación de certificados</span>
+  </div>
+</header>
+
+<main>
+  <div id="status" class="status loading" role="status" aria-live="polite">
+    <div class="icon" aria-hidden="true">…</div>
+    <div>
+      <h1 id="status-title">Verificando certificado…</h1>
+      <p id="status-sub"></p>
+    </div>
+  </div>
+
+  <div id="notfound" class="card notfound" hidden>
+    <p>No existe ningún certificado con el código <strong id="nf-code"></strong>. Revisa que esté bien escrito o ingresa el código nuevamente.</p>
+    <a class="btn" href="/">Buscar otro código</a>
+  </div>
+
+  <div id="content" class="layout" hidden>
+    <div id="cert-frame" class="card cert-frame">
+      <img id="cert-img" alt="Imagen del certificado" decoding="async">
+    </div>
+
+    <aside class="card details">
+      <h2>Datos del certificado</h2>
+      <dl>
+        <dt>Participante</dt><dd id="d-nombre"></dd>
+        <dt>Capacitación</dt><dd id="d-capacitacion"></dd>
+        <dt>Fechas</dt><dd id="d-fechas" class="plain"></dd>
+        <dt>Emitido por</dt><dd id="d-emisor"></dd>
+        <dt>Código</dt><dd id="d-codigo"></dd>
+        <dt>Fecha de emisión</dt><dd id="d-emision" class="plain"></dd>
+        <dt>Firmantes</dt><dd id="d-firmantes" class="plain"></dd>
+      </dl>
+      <div class="actions">
+        <a id="dl-png" class="btn" download>Descargar PNG</a>
+        <a id="dl-pdf" class="btn secondary" download>Descargar PDF</a>
+        <button id="copy" class="btn secondary" type="button">Copiar enlace</button>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>© Towers Consulting Group (TCG) · Verificación oficial de certificados</footer>
+<div id="toast" class="toast" role="status"></div>
+
+<script src="/assets/credencial.js"></script>
+</body>
+</html>

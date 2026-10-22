@@ -1,0 +1,7 @@
+# generados / locales
+salida/
+__pycache__/
+*.pyc
+*.tmp
+node_modules/
+.vercel/

@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://tcg-certificados.vercel.app",
+  "emisor": "Towers Consulting Group (TCG)",
+  "prefijoCodigo": "TCG-CI",
+  "fraseIntroPorDefecto": "Ha participado en las capacitaciones de:",
+  "firmantes": [
+    { "nombre": "Juan Carlos Torres Napa", "cargo": "Chief Data & AI Officer - TCG" },
+    { "nombre": "Ángela Carpio Zamudio", "cargo": "Data & Analytics Manager - TCG" }
+  ],
+  "servidor": { "host": "127.0.0.1", "puerto": 3000 }
+}

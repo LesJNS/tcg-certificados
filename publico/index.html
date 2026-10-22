@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verificar certificado · Towers Consulting Group (TCG)</title>
+<meta name="description" content="Verifica la autenticidad de los certificados emitidos por Towers Consulting Group (TCG).">
+<meta name="theme-color" content="#0070c0">
+<link rel="icon" href="/assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Towers Consulting Group (TCG)">
+<meta property="og:title" content="Verificación de certificados · Towers Consulting Group (TCG)">
+<meta property="og:description" content="Ingresa el código de tu certificado para comprobar su autenticidad.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/" aria-label="Towers Consulting Group, inicio"><img src="/assets/logo.png" alt="Towers Consulting Group"></a>
+    <span class="tag">Verificación de certificados</span>
+  </div>
+</header>
+
+<main>
+  <section class="card hero">
+    <h1>Verifica un certificado</h1>
+    <p>Escribe el código impreso en el certificado o escanea su código QR.</p>
+    <form id="f" class="form" novalidate>
+      <label for="codigo">Código del certificado</label>
+      <input id="codigo" name="codigo" type="text" inputmode="text" autocomplete="off" autocapitalize="characters"
+             spellcheck="false" placeholder="TCG-CI-2026-001" aria-describedby="err">
+      <p id="err" class="error" role="alert"></p>
+      <button class="btn" type="submit">Verificar</button>
+      <span class="hint">Ejemplo: TCG-CI-2026-001</span>
+    </form>
+  </section>
+</main>
+
+<footer>© Towers Consulting Group (TCG) · Verificación oficial de certificados</footer>
+
+<script>
+  document.getElementById("f").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = document.getElementById("codigo").value.replace(/\s+/g, "").toUpperCase();
+    if (!/^[A-Z0-9][A-Z0-9-]{2,40}$/.test(v)) {
+      document.getElementById("err").textContent = "Ingresa un código válido, por ejemplo TCG-CI-2026-001.";
+      return;
+    }
+    location.href = "/c/" + encodeURIComponent(v);
+  });
+</script>
+</body>
+</html>
