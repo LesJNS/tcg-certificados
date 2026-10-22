@@ -263,5 +263,29 @@
     "imagen": "certs/TCG-CI-2026-011.png",
     "vista": "certs/TCG-CI-2026-011.jpg",
     "pdf": "certs/TCG-CI-2026-011.pdf"
+  },
+  {
+    "codigo": "TCG-CI-2026-012",
+    "nombre": "LESLIE NECIOSUP SAAVEDRA",
+    "area": "",
+    "capacitacion": "DESAROLLO E IMPLEMENTACIÓN DE CALIFICACIÓN INTERNA",
+    "frase": "Ha participado en las capacitaciones de:",
+    "fechas": "Realizadas el 5 de octubre",
+    "emisor": "Towers Consulting Group (TCG)",
+    "firmantes": [
+      {
+        "nombre": "Juan Carlos Torres Napa",
+        "cargo": "Chief Data & AI Officer - TCG"
+      },
+      {
+        "nombre": "Ángela Carpio Zamudio",
+        "cargo": "Data & Analytics Manager - TCG"
+      }
+    ],
+    "estado": "vigente",
+    "fecha_emision": "2026-10-22",
+    "imagen": "certs/TCG-CI-2026-012.png",
+    "vista": "certs/TCG-CI-2026-012.jpg",
+    "pdf": "certs/TCG-CI-2026-012.pdf"
   }
 ]
